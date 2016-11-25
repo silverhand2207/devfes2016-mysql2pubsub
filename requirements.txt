@@ -1,0 +1,3 @@
+gcloud
+git+https://github.com/tarzanjw/python-mysql-binlog-to-blinker.git
+pyjwt
