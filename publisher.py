@@ -37,9 +37,11 @@ def listening():
         {
             "host": "localhost",
             "port": 3306,
-            "user": "root",
-            "passwd": "",
+            "user": "slave_user",
+            "passwd": "slave_password",
         },
+        only_schemas=["devfest2016"],
+        only_tables=["comment"]
     )
 
 
