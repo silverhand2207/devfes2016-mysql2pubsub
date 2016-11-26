@@ -1,6 +1,7 @@
 import json
 import logging
 import gpubsub
+from pprint import pprint
 
 __author__ = 'SilverHand'
 _logger = logging.getLogger(__name__)
@@ -20,7 +21,7 @@ def pulling():
             print('=' * 15, 'Message %s.on_rows_updated '
                   % msg['table'], '=' * 15)
             print('Metadata: %s' % msg['meta'])
-            print('Updated value: %s' % msg['row']['updated_values'])
+            pprint(msg['row'])
 
             print('Acknowledging..#%s' % ack_id)
             gpubsub.subscription.acknowledge([ack_id, ])
